@@ -1,0 +1,6 @@
+[		{"keyword":"help","url":"./card/help/index.html"},
+		{"keyword":"button","url":"./card/button/index.html"},
+		{"keyword":"poker","url":"./card/poker/index.html"},
+		{"keyword":"live","url":"./card/live/index.html"},
+    {"keyword":"remote","url":"./card/remote/index.html"}
+]

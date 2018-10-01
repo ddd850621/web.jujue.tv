@@ -1,0 +1,44 @@
+
+.kpad {
+    text-align: center;
+    width: 100%; 
+    margin-top: 1em
+}
+.kpad-row {
+    text-align: center;
+    width: 94%;
+    margin: 0.1em;
+}
+.kpad-btn {
+    border-style: solid;
+    border-color: lightgrey;
+    border-width: 1px;
+    width: 24%;
+    height: 5em;
+}
+.kpad-btn span {
+    font-size: 1.5em;
+    color: blue;
+}
+.smpad-btn {
+    border-style: solid;
+    border-color: lightgrey;
+    border-width: 1px;
+    width: 49%;
+    height: 4em;
+    background: linear-gradient(white, darkgrey);    
+}
+.md {
+    text-align: center;
+    width: 100%; 
+}
+.md-btn {
+    width: 49.5%;
+    height: 5em;
+    font-size: 1em;
+    background: linear-gradient(white,lime);
+    border-style: solid;
+    border-color: lightgrey;
+    border-width: 1px;
+}
+

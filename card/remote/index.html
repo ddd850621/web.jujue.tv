@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html>
+    <meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta name = "viewport" content="width=device-width, initial-scale=1, maximum-scale = 1.0, user-scalable = 0" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="app-mobile-web-app-capable" content="yes" />
+	<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+	<meta name="apple-touch-fullscreen" content="yes" />   
+    <title>SmartScreen Mate</title>
+    <link rel="icon" type="image/png" href="img/ticket.png" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/bootstrap-dialog.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    
+    <script src="js/webmain.js"></script>
+    <script src="js/console.js"></script>
+    <!-- use webmms.js and websocket.js -->
+	<!--
+    <script src="js/mms/webmms.js"></script>
+    <script src="js/mms/websocket.js"></script>
+	-->
+    <!-- end -->
+    
+    <script src="http://boss.ypcloud.com:8081/webmms/webmms.js"></script>
+    <script src="http://boss.ypcloud.com:8081/webmms/websocket.js"></script>
+	<script src="https://cdn.socket.io/socket.io-1.4.5.js"></script>
+	
+    <script src="js/plugin/bootstrap-dialog.js"></script>
+    <!-- Designer defined page -->
+	<!--
+    <nav class="navbar navbar-inverse navbar-fixed-top" id="nav_page" style="display:none">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>                        
+            </button>
+            <a class="navbar-brand" href="#">SmartScreen RC</a>
+          </div>
+          <div class="collapse navbar-collapse" id="myNavbar">
+            <ul class="nav navbar-nav" style="font-size:1.3em">
+                <li><a href="#" id="main_nav">Home</a></li>
+                <li><a href="#" id="set_nav">Setting</a></li>
+                <li><a href="#" id="con_nav">Console</a></li>
+            </ul>
+          </div>
+        </div>
+    </nav>
+	-->
+	<!--
+    <div id="wait_page" style="position:absolute;top:0;left:0;bottom:0;right:0;margin:0;padding:0;text-align:center;width:100%;height:100%;z-index:999;background-color:black;display:none">
+        <img src="img/waiting.gif" alt="Waiting" style="position:relative;top:50%;transform:translateY(-50%);">
+    </div>
+	-->
+	<!--
+    <div class="container-fluid" id="login_page" style="display:none;margin-top:5em;margin-left:1em;margin-right:1em">
+        <div class="row" id="logindiv" style="display:none">
+            <h4 style="color:blue">Login</h4>
+            <br>
+            <form>
+                <div class="form-group wrap-input validate-input" data-validate = "Valid email is: a@b.c">
+                    <input class="form-control input" type="text" name="email" id="email_login" placeholder="Email">
+                </div>
+                <div class="form-group wrap-input validate-input" data-validate="Enter password">
+                    <input class="form-control input" type="password" name="pass" id="pwd_login" placeholder="Password">
+                </div>
+                <button type="button" class="btn btn-primary" id="submit_btn_login" style="width:90px;margin-right:0.5em">Login</button>
+                <button type="reset" class="btn btn-primary" id="reset_btn_login" style="width:90px">Reset</button>
+            </form>
+            <div id="result_login" style="font-size:1.2em;color:blue;margin-left:0.2em;margin-top:1em"></div>
+            <hr>
+            <form>
+                <button type="button" class="btn btn-default" id="signup_btn_login" style="width:90px;margin-right:0.5em">Signup</button>
+                <button type="button" class="btn btn-default" id="forgot_btn_login" style="width:90px">Password?</button>
+            </form>
+        </div>
+        <div class="row" id="signupdiv" style="display:none">
+            <h4 style="color:blue">Signup</h4>
+            <br>
+            <form>
+                <div class="form-group wrap-input validate-input" data-validate = "Valid email is: a@b.c">
+                    <input class="form-control input" type="text" name="uesrname" id="uname_signup" placeholder="User name">
+                </div>
+                <div class="form-group wrap-input validate-input" data-validate = "Valid email is: a@b.c">
+                    <input class="form-control input" type="text" name="email" id="email_signup" placeholder="Email">
+                </div>
+                <div class="form-group wrap-input validate-input" data-validate="Enter password">
+                    <input class="form-control input" type="password" name="pass" id="pwd_signup" placeholder="Password">
+                </div>
+                <div class="form-group wrap-input validate-input" data-validate="Enter confirm password">
+                    <input class="form-control input" type="password" name="pass2" id="pwd2_signup" placeholder="Confirm password">
+                </div>
+                <button type="button" class="btn btn-primary" id="submit_btn_signup" style="width:90px;margin-right:0.5em">Signup</button>
+                <button type="reset" class="btn btn-primary" id="reset_btn_signup" style="width:90px">Reset</button>
+            </form>
+            <div id="result_signup" style="font-size:1.2em;color:blue;margin-left:0.2em;margin-top:1em"></div>
+            <hr>
+            <form>
+                <button type="button" class="btn btn-default" id="login_btn_signup" style="width:90px">Back</button>
+            </form>
+        </div>
+    </div>
+	-->
+    <div class="container" id="home_page" style="display:none">
+		<!--
+        <div class="page-header">
+            <br><br>
+        </div>
+        <div id="div_near_dev" class="row" style="display:block;margin:0.3em">
+            <h4>Nearby SmartScreen</h4>
+            <div style="text-align: right;margin-right:2em">
+                <button type="button" class="btn btn-primary" id="near_refresh_btn" style="width: 100px;">
+                    <span class="glyphicon glyphicon-refresh" aria-hidden="true"></span> Nearby
+                </button>
+            </div>
+            <div id="near_dev" style="margin:1.2em"></div>
+        </div>
+		-->
+        <!--<div id="ctl_ddn" style="font-size:1.2em;color:blue"></div>-->
+		<!--
+        <div id="div_play_media" class="row" style="display:none;margin:0.3em">
+            <h4>Play Station</h4>
+            <div id="play_media" class="row" style="font-size:1.2em;margin:1em"></div><br>
+            <h4>Play Status</h4>
+            <br>
+            <div>
+                <button type="button" class="btn" id="rmt_status_onoff_btn" style="width:100px;margin-left:2em">
+                    <span class="glyphicon glyphicon-off" aria-hidden="true"></span> On/Off
+                </button>
+            </div>
+            <div id="play_stat" class="row" style="margin:1.2em;">
+                <table class="table table-striped">
+                    <tbody>
+                      <tr>
+                        <td style="width:25%;">URL:</td>
+                        <td style="width:75%;overflow:hidden"id="play_url" style="color:blue;"></td>
+                      </tr>
+                      <tr>
+                        <td style="width:25%">Duration:</td>
+                        <td id="play_duration" style="color:blue;"></td>
+                      </tr>
+                      <tr>
+                        <td style="width:25%">Time:</td>
+                        <td id="play_time" style="color:blue;"></td>
+                      </tr>
+                      <tr>
+                        <td>State:</td>
+                        <td id="play_state" style="color:blue;"></td>
+                      </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+		-->
+        <div id="ctl_keypad" class="row" style="margin:0.3em">
+            <!--<h4>Play Control</h4>-->
+            <div class="row kpad" style="margin:1em">
+				<!--
+                <h5 style="color:darkblue;width:94%;">Channel</h5>
+                <div id="ctl_row1" class="kpad-row">
+                    <button type="button" id="chfirst_btn" class="btn kpad-btn" title="First Channel"><span class="glyphicon glyphicon-fast-backward" aria-hidden="true"></span></button>
+                    <button type="button" id="chprev_btn" class="btn kpad-btn" title="Previous Channel"><span class="glyphicon glyphicon-backward" aria-hidden="true"></span></button>
+                    <button type="button" id="chnext_btn" class="btn kpad-btn" title="Next Channel"><span class="glyphicon glyphicon-forward" aria-hidden="true"></span></button>
+                    <button type="button" id="chlast_btn" class="btn kpad-btn" title="Last Channel"><span class="glyphicon glyphicon-fast-forward" aria-hidden="true"></span></button>
+                </div>
+                <h5 style="color:darkblue;width:94%;">Media</h5>
+				-->
+                <div id="ctl_row2" class="kpad-row">
+					<!--
+                    <button type="button" id="playfirst_btn" class="btn kpad-btn" title="First Media"><span class="glyphicon glyphicon-step-backward" aria-hidden="true"></span></button>
+					-->
+                    <button type="button" id="playprev_btn" class="btn kpad-btn" title="Previous Media"><span class="glyphicon glyphicon-triangle-left" aria-hidden="true"></span></button>
+                    <button type="button" id="playnext_btn" class="btn kpad-btn" title="Next Media"><span class="glyphicon glyphicon-triangle-right" aria-hidden="true"></span></button>
+					<!--
+                    <button type="button" id="playlast_btn" class="btn kpad-btn" title="Last Media"><span class="glyphicon glyphicon-step-forward" aria-hidden="true"></span></button>
+					-->
+                </div>
+                <div id="ctl_row3" class="kpad-row">
+                    <button type="button" id="play_btn" class="btn kpad-btn" title="Play"><span class="glyphicon glyphicon-play" aria-hidden="true"></span></button>
+                    <button type="button" id="pause_btn" class="btn kpad-btn" title="Pause"><span class="glyphicon glyphicon-pause" aria-hidden="true"></span></button>
+					<!--
+                    <button type="button" id="volumeup_btn" class="btn kpad-btn" title="Volume up"><span class="glyphicon glyphicon-volume-up" aria-hidden="true"></span></button>
+                    <button type="button" id="volumedown_btn" class="btn kpad-btn" title="Volume down"><span class="glyphicon glyphicon-volume-down" aria-hidden="true"></span></button>
+					-->
+                </div>
+            </div>
+        </div>
+		<!--
+        <div id="ctl_playlist" class="row" style="margin:0.3em">
+            <h4>Playlist</h4>
+            <br>
+            <button type="button" class="btn btn-primary" id="get_pl_btn" style="width:100px;margin-left:2em">
+                <span class="glyphicon glyphicon-refresh" aria-hidden="true"></span> Show
+            </button>
+            <div style="text-align:center">
+                <br><div id="div_playlist" style="width:94%;margin-left:1em"></div>
+            </div>
+        </div>
+        <div id="con_keypad" class="row" style="margin:0.3em">
+            <h4>Console Control</h4>
+            <div class="row kpad" style="margin:1em">
+                <div id="con_ctl_row1" class="kpad-row">
+                    <button type="button" id="con_onoff_btn" class="btn kpad-btn" title="Console on/off"><span class="glyphicon glyphicon-off" aria-hidden="true"></span></button>
+                    <button type="button" id="con_clear_btn" class="btn kpad-btn" title="Console clear"><span class="glyphicon glyphicon-unchecked" aria-hidden="true"></span></button>
+                    <button type="button" id="con_scrollup_btn" class="btn kpad-btn" title="Console scroll up"><span class="glyphicon glyphicon-collapse-up" aria-hidden="true"></span></button>
+                    <button type="button" id="con_scrolldown_btn" class="btn kpad-btn" title="Console scroll down"><span class="glyphicon glyphicon-collapse-down" aria-hidden="true"></span></button>    
+                </div>
+            </div>
+        </div>
+        <div id="con_keypad" class="row" style="margin:0.3em">
+            <h4>Setting Control</h4>
+            <br>
+            <div>
+                <button type="button" class="btn btn-primary" id="rmt_set_onoff_btn" style="width:100px;margin-left:2em">
+                    <span class="glyphicon glyphicon-off" aria-hidden="true"></span> On/Off
+                </button>
+            </div>
+            <div id="rmt_set_body" class="row kpad" style="margin:1em">
+                <div class="kpad-row">
+                    <fieldset>
+                    <legend></legend>
+                    <form>
+                        <div class="form-group">
+                            <label for="rmt_set_name">EiName</label>
+                            <input type="text" class="form-control" id="rmt_set_name" placeholder="eiyp">
+                        </div>
+                        <div class="form-group">
+                            <label for="rmt_set_tag">EiTag</label>
+                            <input type="text" class="form-control" id="rmt_set_tag" placeholder="#yp">
+                        </div>
+                        <div class="form-group">
+                            <label for="rmt_set_loc">EiLoc</label>
+                            <input type="text" class="form-control" id="rmt_set_loc" placeholder="25.0313915,121.5565951">
+                        </div>
+                    </form>
+                    </fieldset>
+                </div>
+            </div>
+            <div style="text-align: center">
+                <button type="button" class="btn btn-primary" id="rmt_set_btn"  style="width: 100px">
+                    <span class="glyphicon glyphicon-ok-sign" aria-hidden="true"></span> Setting
+                </button>
+            </div>
+        </div>
+		-->
+    </div>
+	<!--
+    <div class="container" id="set_page" style="display:none">
+        <div class="page-header">
+            <br><br>
+            <h3>Setting</h3>
+        </div>
+        <div id="set_body" class="row">
+            <div style="text-align:right;margin-bottom:1.2em;">
+                <button data-button="save" type="button" class="btn btn-primary" id="save_btn_setting">
+                    <span class="glyphicon glyphicon-save" aria-hidden="true"></span> Save
+                </button>
+                <br>
+            </div>
+            <div class="row">
+                <form class="form-horizontal col-sm-12">
+                    <div class="form-group">
+                        <label class="control-label col-sm-2" for="set_ddn">DDN</label>
+                        <div class="col-sm-10"> 
+                            <input type="text" class="form-control" id="set_ddn" placeholder="" readonly>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-sm-2" for="set_owner">Owner</label>
+                        <div class="col-sm-10"> 
+                            <input type="text" class="form-control" id="set_owner" placeholder="" readonly>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-sm-2" for="set_name">Name</label>
+                        <div class="col-sm-10"> 
+                            <input type="text" class="form-control" id="set_name" placeholder="">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-sm-2" for="set_type">Type</label>
+                        <div class="col-sm-10"> 
+                            <input type="text" class="form-control" id="set_type" placeholder="" readonly>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-sm-2" for="set_tag">Tag</label>
+                        <div class="col-sm-10"> 
+                            <input type="text" class="form-control" id="set_tag" placeholder="">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-sm-2" for="set_location">Location</label>
+                        <div class="col-sm-10"> 
+                            <input type="text" class="form-control" id="set_location" placeholder="">
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+	-->
+	<!--
+    <div class="container" id="con_page" style="display:none">
+        <div class="page-header">
+            <br><br>
+        </div>
+        <div id="text_console" class="row" style="font-size:1.2em;height:10em;overflow:auto">
+        </div>
+    </div>
+	-->
+</html>

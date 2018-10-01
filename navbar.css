@@ -1,0 +1,177 @@
+.Navbar {
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-pack: justify;
+	  justify-content: space-between;
+	-ms-flex-align: center;
+	  align-items: center;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 50px;
+	background-color: #009FDD;
+	z-index: 2; 
+}
+.Navbar .back {
+	width: 40px;
+	height: 40px;
+	background-position: center;
+	background-size: 20px;
+	background-repeat: no-repeat; 
+}
+.Navbar  > .logo {
+	width: 30px;
+	height: 25px;
+	background-position: center;
+	background-size: contain;
+	background-repeat: no-repeat;
+	margin: 0 auto; 
+}
+.Navbar > .Nav_right {
+	position: absolute;
+	right: 0px;
+	width: 80px;
+	height: 50px;
+}
+.Navbar  > .box{
+	position: absolute;
+	left: 45px;
+	right: -5px;
+	height:40px;
+}
+.search_bar{
+	position: absolute;
+	left: 0px;
+	right:60px;
+	height: 40px;
+	background-color: #FFFFFF;
+	border-style: solid;
+	border-color: #FFFFFF;/*959595*/
+	border-radius: 15px;
+/*
+	position: relative;
+	height: 40px;
+	background-color: #FFFFFF;
+	border-style: solid;
+	border-color: #959595;
+	border-radius: 15px;
+	width:83%;
+	float: left;
+	*/
+}
+.search{
+    font: bold 20px Arial,Helvetica,Sans-serif;
+	height: 40px;
+    width: 50%;
+    padding: 6px 15px 6px 0px;
+	display:inline;
+}
+.searchTerm_tag{
+  position: absolute;
+  width: 80%;
+  left: 40px;
+  right: 150px;
+  border: 0px solid #FFFFFF;/**00B4CC*/
+  font: 20px Arial,Helvetica,Sans-serif;
+  padding: 0px;
+  height: 95%;
+  outline: none;
+  color: #9DBFAF;
+  background-color: transparent;
+}
+.Navbar  > .searchButton{
+  position: absolute;  
+  right: -50px;
+  width: 40px;
+  height: 36px;
+  border: 1px solid #00B4CC;
+  background: #00B4CC;
+  text-align: center;
+  color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 20px;
+}
+.navBarImg2{
+	position: absolute;  
+	width: 25px;
+	height: 25px;
+	right: 5px;
+	margin: 5px 7px 10px 10px;
+}
+.navBarImg{
+	position: absolute;  
+	width: 25px;
+	height: 25px;
+	right: 15px;
+	top: -3px;
+	margin: 10px 7px 10px 10px;
+}
+.navBarImg3{
+	position: relative;  
+	width: 25px;
+	height: 25px;
+	margin: 5px 0px 7px 7px;
+}
+.navBarImg4{
+	position: absolute;  
+	width: 25px;
+	height: 25px;
+	left: -5px;
+	top: 0px;
+	margin: 0px 7px 0px 0px;
+}
+.Navbar > a.backHome {
+	margin: 0; 
+}
+.input_bar{
+	position: absolute;
+	left: 45px;
+	right: 90px;
+	height: 40px;
+	top: 9px;
+	border: 10px solid rgba(255,255,255,.5);/**/
+	background-clip: padding-box;/**/
+	background-color: #FFFFFF;
+	/*border-style: solid;
+	border-color: #959595;*/
+	border-radius: 10px;
+}
+.inputBarImg{
+	position: absolute;  
+	width: 25px;
+	height: 25px;
+	left: 10px;
+	bottom: 18px;
+	margin: 0px 7px 10px 0px;
+}
+.inputBarImg2{
+	position: absolute;  
+	width: 25px;
+	height: 25px;
+	right: 10px;
+	bottom: 18px;
+	visibility: visible;
+	margin: 10px 7px 10px 0px;
+}
+.inputBarImg3{
+	position: absolute;  
+	width: 25px;
+	height: 25px;
+	right: 45px;
+	bottom: 18px;
+	visibility: visible;
+	margin: 10px 7px 10px 0px;
+}
+.input_tag{
+  position: absolute;
+  width: 100%;
+  border: 0px solid #FFFFFF;/**00B4CC*/
+  font: 18px Arial,Helvetica,Sans-serif;
+  padding: 0px;
+  height: 95%;
+  outline: none;
+  color: #9DBFAF;
+  background-color: transparent;
+}

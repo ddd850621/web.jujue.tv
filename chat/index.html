@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset = "utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="app-mobile-web-app-capable" content="yes" />
+	<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+	<meta name="apple-touch-fullscreen" content="yes" />  
+	<title>Jujue</title>
+	<link rel = "stylesheet" type = "text/css" href = "../player.css">
+	<link rel = "stylesheet" type = "text/css" href = "../sidebar.css">
+	<link rel = "stylesheet" type = "text/css" href = "../navbar.css">
+	<link rel = "stylesheet" type = "text/css" href = "../loader.css">
+	<link rel = "stylesheet" type = "text/css" href = "../divstyle.css">
+	<link class="icon" href="../img/jujue_B_1024x1024.png" rel="apple-touch-icon-precomposed" />
+	<link class="icon" href="../img/jujue_A_1024x1024.png" rel="SHORTCUT ICON" />
+	<link href="../img/jujue_A_1024x1024.png" rel="shortcut icon" />
+	
+	
+	<!--<link href="css/bootstrap.css" rel="stylesheet">-->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<!-- ====================================================================================================== -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> 
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+	<!-- ====================================================================================================== -->
+    <script type="text/javascript" src="./js/loadJson.js"></script>
+	<!-- plugin -->
+    <script type='text/javascript' src='../js/plug/material.js'></script>
+	<!--
+	<script type='text/javascript' src='js/plug/bootstrap.min.js'></script>  -->
+	<script type='text/javascript' src='../js/plug/bootstrap-dialog.js'></script>
+	<!-- jujue main -->
+    <script type='text/javascript' src='../js/keypad/c_devicerConfig.js'></script> 
+	<!-- main -->	
+    <script type="text/javascript" src="./js/main.js"></script>
+	<script type="text/javascript" src="./js/card.js"></script>
+	<script type="text/javascript" src="../js/setting.js"></script>
+	<script type="text/javascript" src="../js/webconfig.js"></script>
+	<script type="text/javascript" src="../js/nearby.js"></script>
+	<script type="text/javascript" src="../js/mms/ucenter.js"></script>
+	<script src="http://boss.ypcloud.com:8081/webmms/webmms.js"></script>
+	<script src="http://boss.ypcloud.com:8081/webmms/websocket.js"></script>
+	<script src="https://cdn.socket.io/socket.io-1.4.5.js"></script>
+</head>
+<body style="background-color: #F5F5F5;">
+	<!--------------------------------------Top Navbar---------------------------------------------------->
+	<div>
+		<div class="Navbar">
+			<nav role="navigation">
+				<div id="menuToggle">
+					<a href="http://web.jujue.tv/">
+						<img class="navBarImg4" src="../img/back_72x72.png">
+					</a>
+				</div>
+			</nav>
+			<div class="box">
+				<div class="search_bar">
+					<img class="navBarImg3" src="../img/search_144x144.png">
+					<input class="searchTerm_tag" id="search_value" type="text" placeholder="Search..." />
+					<a href="#" >
+						<img class="navBarImg2" src="../img/qrscan_144x144.png">
+					</a>
+				</div>
+				<a id="nearbyButton" style = "display:none" onclick="open_button(&#39;nearby&#39;);">
+					<img class="navBarImg" src="../img/nearby_144x144.png">
+				</a>
+				<a id="nearbyButtonWaiting" style = "display:block" onclick="open_button(&#39;waiting&#39;);">
+					<img class="navBarImg" src="../img/nearby_144x144.png">
+				</a>
+				
+			</div>
+		</div>
+	</div>
+	<!---------------------------------------------------------------------------------------------------->
+	<div class="messageBody" id = "display">
+		
+	</div>
+	<!--------------------------------------Bottom Navbar------------------------------------------------->
+
+	<div class="Player">
+		<div class="control">
+			<div>
+				<img class="inputBarImg" src="../img/sticker_72x72.png">
+			</div>
+			<div class="input_bar" id="input_bar_div">
+				<input class="input_tag" id="input_value" type="text" placeholder="Write a card name..." onkeypress="doKeypressSearch();"/>
+			</div>
+			<a href="#">
+				<img class="inputBarImg3" id="inputBarImg3" onclick="addSlash();" src="../img/pin_72x72.png">
+			</a>
+			<a href="#">
+				<img class="inputBarImg2" id="inputBarImg2" src="../img/Paper_clip_72x72.png">
+			</a>
+			<a href="#">
+				<img class="inputBarImg2" id="inputBar_input" onclick="doClick();" style="display:none;" src="../img/send_72x72.png">
+			</a>
+		</div>
+	</div>
+	<div id="nearbyModal" class="modal fade" role="dialog">
+		<div class="modal-dialog">
+			<!-- Modal content-->
+			<div class="modal-content">
+				<div class="modal-header">
+					<h4 class="modal-title">Nearby</h4>
+					<div>
+						<p class="pull-right">
+							<button type="button" class="btn btn-primary" aria-label="Left Align" id="btn-exit-nearby">
+								<span class="glyphicon glyphicon-remove" aria-hidden="true"></span> Exit
+							</button>
+							<button type="button" class="btn btn-primary" aria-label="Left Align" id="btn-save-nearby">
+								<span class="glyphicon glyphicon-save" aria-hidden="true"></span> Save
+							</button>
+						</p>
+					</div>
+				</div>
+				<div class="modal-body">
+					<span style="color:blue;font-size:1.2em">Device list:</span>
+				</div>
+				<div class="modal-footer">
+					<div id="control_nearby_list" style="text-align:left; width: 100%;">
+					
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="div_nearby"></div>
+	
+	<div id="nearbyWaiting" class="modal fade" role="dialog">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h4 class="modal-title">Nearby</h4>
+					<div>
+						<p class="pull-right">
+							<button type="button" class="btn btn-primary" aria-label="Left Align" id="btn-exit-nearbyWaiting">
+								<span class="glyphicon glyphicon-remove" aria-hidden="true"></span> Exit
+							</button>
+						</p>
+					</div>
+				</div>
+				<div>
+					<div class="loader">
+					
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,137 @@
+.Player {
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 60px;/*60px*/
+	background-color: #FCFCFC;
+	z-index: 2; 
+	border-width:1px;
+	border-top-style:solid;
+	border-top-color: #E5E5E5;
+	/*border-radius: 15px;*/ /*角落圓滑*/
+}
+.Player > .control {
+    position: relative;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+    height: 120%;
+    -ms-flex-pack: justify;
+        justify-content: space-between;
+    -ms-flex-align: center;
+        align-items: center; 
+}
+.Player > .control .left_icon {
+	width: 70px;
+	height: 70px;
+	background-repeat: no-repeat;
+	background-position: center; 
+	position: absolute;
+	top: 8%;
+	left: 10%;
+	margin-left: -17px;
+}
+.Player > .control .middle_left_icon {
+	width: 70px;
+	height: 70px;
+	background-repeat: no-repeat;
+	background-position: center;
+	position: absolute;
+	top: 8%;/*8*/
+	left: 30%;
+	margin-left: -17px;
+}
+.Player > .control .center_icon {
+	width: 70px;
+	height: 70px;
+	background-repeat: no-repeat;
+	background-position: center;
+	position: absolute;
+	top: 8%;
+	left: 50%;
+	margin-left: -17px;
+}
+.Player > .control .middle_right_icon {
+	width: 70px;
+	height: 70px;
+	background-repeat: no-repeat;
+	background-position: center;
+	position: absolute;
+	top: 8%;
+	left: 70%;
+	margin-left: -17px;
+}
+.Player > .control .right_icon {
+	width: 70px;
+	height: 70px;
+	background-repeat: no-repeat;
+	background-position: center;
+	position: absolute;
+	top: 8%;
+	left: 90%;
+	margin-left: -17px;
+}
+.Player > .control .homeName {
+	font-size: 13px;
+	color: #7b7b7b;
+	display: block;
+	position: absolute;
+	width: 100%;
+	height: 14px;
+	line-height: 14px;
+	text-align: left;
+	left: 10%;
+	margin-left: -16px;
+	bottom: 15px; 
+}
+.Player > .control .chatName {
+	font-size: 13px;
+	color: #7b7b7b;
+	display: block;
+	position: absolute;
+	width: 100%;
+	height: 14px;
+	line-height: 14px;
+	text-align: left;
+	left: 30%;
+	margin-left: -16px;
+	bottom: 15px; 
+}
+.Player > .control .jujueName {
+	font-size: 13px;
+	color: #7b7b7b;
+	display: block;
+	position: absolute;
+	width: 100%;
+	height: 14px;
+	line-height: 14px;
+	text-align: center;
+	bottom: 15px; 
+}
+.Player > .control .notifyName {
+	font-size: 13px;
+	color: #7b7b7b;
+	display: block;
+	position: absolute;
+	width: 100%;
+	height: 14px;
+	line-height: 14px;
+	text-align: left;
+	left: 70%;
+	margin-left: -18px;
+	bottom: 15px; 
+}
+.Player > .control .contactName {
+	font-size: 13px;
+	color: #7b7b7b;
+	display: block;
+	position: absolute;
+	width: 100%;
+	height: 14px;
+	line-height: 14px;
+	text-align: left;
+	left: 90%;
+	margin-left: -20px;
+	bottom: 15px; 
+}

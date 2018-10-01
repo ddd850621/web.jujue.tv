@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+     <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale = 1.0, user-scalable = 0" />
+     <meta name="apple-mobile-web-app-capable" content="yes" />
+     <meta name="app-mobile-web-app-capable" content="yes" />
+     <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+     <meta name="apple-touch-fullscreen" content="yes" />
+	 <title>Poker</title>
+     <link rel="icon" type="image/png" href="img/ticket.png" />
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+     <link href="css/style.css" rel="stylesheet">
+     <link href="css/bootstrap-dialog.css" rel="stylesheet">
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+     <script src="https://cdn.socket.io/socket.io-1.4.5.js"></script>
+
+     <script src="http://boss.ypcloud.com:8081/webmms/webmms.js"></script>
+     <script src="http://boss.ypcloud.com:8081/webmms/websocket.js"></script>
+
+     <script src="js/mmsmain.js"></script>
+
+     <link href="https://unpkg.com/ionicons@4.0.0/dist/css/ionicons.min.css" rel="stylesheet" />
+</head>
+
+<body>
+     <div class="btn-group">
+         <div class="btn-tool">
+             <button type="button" id="send_btn_xmsg1" class="button">
+                 <img src="img/Club.jpg" alt="Club-Logo">
+             </button>
+             <p>梅花</p>
+         </div>
+
+         <div class="btn-tool">
+             <button type="button" id="send_btn_xmsg2" class="button">
+                 <img src="img/Diamond.png" alt="Diamond-Logo">
+             </button>
+             <p>方塊</p>
+         </div>
+
+         <div class="btn-tool">
+             <button type="button" id="send_btn_xmsg3" class="button">
+                 <img src="img/Spade.jpg" alt="Spade-Logo">
+             </button>
+             <p>黑桃</p>
+         </div>
+		
+         <div class="btn-tool">
+             <button type="button" id="send_btn_xmsg4" class="button">
+                 <img src="img/Heart.jpg" alt="Heart-Logo">
+             </button>
+             <p>愛心</p>
+         </div>
+
+         <div class="btn-tool">
+             <button type="button" id="send_btn_xmsg5" class="button" onclick="mmsSendXmsg('','drop https://www.youtube.com/watch?v=UG-el9xOAo0')">
+                 <i class="icon ion-logo-youtube"></i>
+             </button>
+             <p>五月天</p>
+         </div>
+
+         <div class="btn-tool">
+             <button type="button" id="send_btn_xmsg6" class="button" onclick="mmsSendXmsg('','drop http://cdn.ypcall.com/miki/yp/djdemo/sugar.mp4')">
+                 <i class="icon ion-logo-youtube"></i>
+             </button>
+             <p>Sugar</p>
+         </div>
+     </div>
+</body>
+</html>

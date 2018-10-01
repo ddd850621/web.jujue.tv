@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+     <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale = 1.0, user-scalable = 0" />
+     <meta name="apple-mobile-web-app-capable" content="yes" />
+     <meta name="app-mobile-web-app-capable" content="yes" />
+     <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+     <meta name="apple-touch-fullscreen" content="yes" />
+	 <title>live</title>
+     <link rel="icon" type="image/png" href="img/ticket.png" />
+	 
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+     <link href="css/style.css" rel="stylesheet">
+     <link href="css/bootstrap-dialog.css" rel="stylesheet">
+	 <!-- ====================================================================================================== -->
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> 
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+	 <!-- ====================================================================================================== -->
+     <script src="https://cdn.socket.io/socket.io-1.4.5.js"></script>
+
+     <script src="http://boss.ypcloud.com:8081/webmms/webmms.js"></script>
+     <script src="http://boss.ypcloud.com:8081/webmms/websocket.js"></script>
+
+     <script src="js/mmsmain.js"></script>
+
+     <link href="https://unpkg.com/ionicons@4.0.0/dist/css/ionicons.min.css" rel="stylesheet" />
+</head>
+
+<body>
+     <div class="btn-group">
+         <div class="btn-tool">
+             <button type="button" id="send_btn_xmsg1" class="button" onclick="mmsSendXmsg('','drop http://6d07.ypcall.com:8220/getstream?hls=0')">
+                 <img src="img/ceilingcamera_30x30.png" alt="Club-Logo">
+             </button>
+             <p>6D07</p>
+         </div>
+
+         <div class="btn-tool">
+             <button type="button" id="send_btn_xmsg2" class="button" onclick="mmsSendXmsg('','drop http://6d16.ypcall.com:8220/getstream?hls=0')">
+                 <img src="img/ceilingcamera_30x30.png" alt="Diamond-Logo">
+             </button>
+             <p>6D16</p>
+         </div>
+
+         <div class="btn-tool">
+             <button type="button" id="send_btn_xmsg3" class="button" onclick="mmsSendXmsg('','drop http://5c04.ypcall.com:8220/getstream?hls=0')">
+                 <img src="img/ceilingcamera_30x30.png" alt="Spade-Logo">
+             </button>
+             <p>5C04</p>
+         </div>
+		
+         <div class="btn-tool">
+             <button type="button" id="send_btn_xmsg4" class="button" onclick="mmsSendXmsg('','drop http://6d16.ypcall.com:8215/getstream?hls=0')">
+                 <img src="img/camera_30x30.png" alt="Heart-Logo">
+             </button>
+             <p>Show1</p>
+         </div>
+
+         <div class="btn-tool">
+             <button type="button" id="send_btn_xmsg5" class="button" onclick="mmsSendXmsg('','drop http://5c04.ypcall.com:8215/getstream?hls=0')">
+                 <img src="img/camera_30x30.png" alt="Heart-Logo">
+             </button>
+             <p>Show2</p>
+         </div>
+
+         <div class="btn-tool">
+             <button type="button" id="send_btn_xmsg6" class="button" onclick="mmsSendXmsgNodeRed('0eKKiRyU','')">
+                 <img src="img/camera_30x30.png" alt="Heart-Logo">
+             </button>
+             <p>Demo</p>
+         </div>
+     </div>
+</body>
+</html>

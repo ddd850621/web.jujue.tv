@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Login</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta name = "viewport" content="width=device-width, initial-scale=1, maximum-scale = 1.0, user-scalable = 0" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="app-mobile-web-app-capable" content="yes" />
+	<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+	<meta name="apple-touch-fullscreen" content="yes" />   
+<!--===============================================================================================-->	
+	<link rel="icon" type="image/png" href="images/icons/favicon.ico"/>
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="fonts/iconic/css/material-design-iconic-font.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link href="css/style.css" rel="stylesheet"><!--------------                  ------------------------->
+    <link href="css/bootstrap-dialog.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<script src="vendor/jquery/jquery-3.2.1.min.js"></script> <!--------                           ------->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://cdn.socket.io/socket.io-1.4.5.js"></script>
+    <script src="js/webmain.js"></script>
+    <script src="js/webconfig.js"></script>
+    <!--<script src="js/view/console.js"></script> -->
+	<script src="js/plugin/bootstrap-dialog.js"></script>
+	<!------------------------------------------------------------------------>
+	<script src="http://boss.ypcloud.com:88/webmms/webmms.js"></script>
+    <script src="http://boss.ypcloud.com:88/webmms/websocket.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<!-- use webmms.js and websocket.js -->
+	<!--
+    <script src="js/mms/webmms.js"></script>
+    <script src="js/mms/websocket.js"></script>
+	-->
+</head>
+<body>
+	
+	<div class="limiter" id="login_page">
+		<div class="container-login">
+			<div>
+				<form class="login-form validate-form" action="" method="get"><!--http://web.jujue.tv/-->
+					<span class="form-title">
+						Login
+					</span>
+
+					<div class="wrap-input validate-input" data-validate = "Valid email is: a@b.c">
+						<input class="input has-val" id="email_login" type="text" name="email">
+						<span class="focus-input" data-placeholder="Email"></span>
+					</div>
+
+					<div class="wrap-input validate-input" data-validate="Enter password">
+						<span class="btn-show-pass">
+							<i class="zmdi zmdi-eye"></i>
+						</span>
+						<input class="input has-val" id="pwd_login" type="password" name="pass">
+						<span class="focus-input" data-placeholder="Password"></span>
+					</div>
+					
+					<div class="container-login-form-btn">
+						<div class="wrap-login-form-btn">
+							<div class="login-form-bgbtn1"></div>
+							<button class="login-form-btn" id="submit_btn_login">
+								Login
+							</button>
+						</div>
+						
+					</div>
+				</form>
+				
+				<div class="wrap-login-form-btn" style="top: 10px;">
+					<div class="login-form-bgbtn2"></div>
+					<button class="login-form-btn2" id="signup_btn_login">
+						Registered
+					</button>
+				</div>
+				
+				<div id="result_login" style="font-size:1em;color:blue;margin-left:0.2em;margin-top:1em;bottom: 10px;">
+				
+				</div>
+				<div class="text">
+						<a class="txt2" href="./forgetpass/ForgetPassword.html">
+							Forget password?
+						</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="limiter" id="signup_page" style="display:none;">
+		<div class="container-login">
+			<div>
+				<form class="login-form validate-form" action="./Verification.html" method="get">
+					<span class="form-title">
+						Create your account
+					</span>
+
+					<div class="wrap-input validate-input" data-validate = "Enter name">
+						<input class="input has-val" type="text" name="name" id="uname_signup">
+						<span class="focus-input" data-placeholder="Name"></span>
+					</div>
+					
+					<div class="wrap-input validate-input" data-validate = "Valid email is: a@b.c">
+						<input class="input has-val" type="text" name="email" id="email_signup">
+						<span class="focus-input" data-placeholder="Email"></span>
+					</div>
+
+					<div class="wrap-input validate-input" data-validate="Enter password">
+						<span class="btn-show-pass">
+							<i class="zmdi zmdi-eye"></i>
+						</span>
+						<input class="input has-val" type="password" name="pass" id="pwd_signup">
+						<span class="focus-input" data-placeholder="Password"></span>
+					</div>
+					
+					<div class="wrap-input validate-input" data-validate = "Enter confirm password">
+						<span class="btn-show-pass">
+							<i class="zmdi zmdi-eye"></i>
+						</span>
+						<input class="input has-val" type="password" name="confirm" id="pwd2_signup">
+						<span class="focus-input" data-placeholder="Confirm Password"></span>
+					</div>
+
+					<div class="container-login-form-btn">
+						<div class="wrap-login-form-btn">
+							<div class="login-form-bgbtn1"></div>
+							<button class="login-form-btn" id="submit_btn_signup">
+								Next
+							</button>
+						</div>
+					</div>
+					<div class="wrap-login-form-btn" style="top: 10px;">
+						<div class="login-form-bgbtn2"></div>
+						<button class="login-form-btn2" id="login_btn_signup">
+							 Back
+						</button>
+					</div>
+					<div id="result_signup" style="font-size:1.2em;color:blue;margin-left:0.2em;margin-top:1em">
+					
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+
+	<script src="js/main.js"></script> 
+
+</body>
+</html>

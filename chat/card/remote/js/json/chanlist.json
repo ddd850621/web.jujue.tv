@@ -1,0 +1,30 @@
+{
+    "station":{"id":"s01","name":"YPCloud","icon":"","channel":[
+        {"id":"c0101","name":"Demo","icon":"","media":[
+                {"name":"世大運","mtype":"video","icon":"","url":"https://www.youtube.com/watch?v=KXOcAiAkqyg"},
+                {"name":"YPCLOUD雲耕隊","mtype":"video","icon":"","url":"http://cdn.ypcall.com/Miki/YP/YPCloud/Clouder/Clouder.mp4"},
+                {"name":"Computex 2018","mtype":"video","icon":"","url":"http://6d16.ypcall.com:6781/miki/YPCloud/Event/2018/2018computex.mp4"},
+                {"name":"香格里拉空中花園&音樂城堡","mtype":"video","icon":"","url":"https://www.youtube.com/watch?v=6qMDppJQnCk"},
+                {"name":"吉而好","mtype":"video","icon":"","url":"http://cdn.ypcall.com/miki/YP/吉而好/Poodehii.mp4"}
+            ]
+        },
+        {"id":"c0102","name":"心和萬事興","icon":"","media":[
+                {"name":"心和萬事興1","mtype":"video","icon":"","url":"http://cdn.ypcall.com/miki/YP/心和萬事興/心和-01.mp4"},
+                {"name":"心和萬事興2","mtype":"video","icon":"","url":"http://cdn.ypcall.com/miki/YP/心和萬事興/心和-02.mp4"},
+                {"name":"心和萬事興3","mtype":"video","icon":"","url":"http://cdn.ypcall.com/miki/YP/心和萬事興/心和-03.mp4"},
+                {"name":"心和萬事興4","mtype":"video","icon":"","url":"http://cdn.ypcall.com/miki/YP/心和萬事興/心和-04.mp4"},
+                {"name":"心和萬事興5","mtype":"video","icon":"","url":"http://cdn.ypcall.com/miki/YP/心和萬事興/心和-05.mp4"},
+                {"name":"心和萬事興6","mtype":"video","icon":"","url":"http://cdn.ypcall.com/miki/YP/心和萬事興/心和-06.mp4"}
+            ]
+        },
+        {"id":"c0103","name":"Presentation","icon":"","media":[
+                {"name":"YPCloud1","mtype":"image","icon":"","url":"http://cdn.ypcall.com/miki/YP/YPCloud/About/IMG_4772.PNG"},
+                {"name":"YPCloud2","mtype":"image","icon":"","url":"http://cdn.ypcall.com/miki/YP/YPCloud/About/IMG_4773.PNG"},
+                {"name":"YPCloud3","mtype":"image","icon":"","url":"http://cdn.ypcall.com/miki/YP/YPCloud/About/IMG_4774.PNG"},
+                {"name":"YPCloud4","mtype":"image","icon":"","url":"http://cdn.ypcall.com/miki/YP/YPCloud/About/IMG_4775.PNG"},
+                {"name":"YPCloud5","mtype":"image","icon":"","url":"http://cdn.ypcall.com/miki/YP/YPCloud/About/IMG_4776.PNG"},
+                {"name":"YPCloud6","mtype":"image","icon":"","url":"http://cdn.ypcall.com/miki/YP/YPCloud/About/IMG_4777.PNG"}
+            ],"duration":"5","animate":"fade","aniduration":"3"
+        }
+    ]}
+}

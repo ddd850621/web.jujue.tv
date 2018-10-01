@@ -1,0 +1,198 @@
+.DIVstyle{
+	position: relative;
+	top: 80px;
+	margin: 5%;
+	margin-bottom: 40px;
+	width: 90%;
+	height: 150px; /*暫定  主要依內容大小變動*/
+	/*border-style: solid;
+	border-color: #959595;
+	border-width: 1px;*/
+	border-radius: 15px; /*角落圓滑*/
+	box-shadow: 0px 3px 13px 1px #D4D4D4;
+	-webkit-box-shadow: 0px 3px 13px 1px #D4D4D4;
+	-moz-box-shadow: 0px 3px 13px 1px #D4D4D4;
+	-o-box-shadow: 0px 3px 13px 1px #D4D4D4;
+}
+.DIVstyle_bottom{
+	position: relative;
+	top: 80px;
+	margin: 5%;
+	margin-bottom: 130px;
+	width: 90%;
+	height: 150px; /*暫定  主要依內容大小變動*/
+	/*border-style: solid;
+	border-color: #959595;
+	border-width: 1px;*/
+	border-radius: 15px; /*角落圓滑*/
+	box-shadow: 0px 3px 13px 1px #D4D4D4;
+	-webkit-box-shadow: 0px 3px 13px 1px #D4D4D4;
+	-moz-box-shadow: 0px 3px 13px 1px #D4D4D4;
+	-o-box-shadow: 0px 3px 13px 1px #D4D4D4;
+}
+
+.title {
+	font-size: 13px;
+	text-align: left;
+	margin-top: 1px;
+	margin-left: 5px;
+	margin-bottom: 3px;
+	height: 20px;
+	display:inline;
+}
+.divStyleTop{
+	background: #FDFCFC;
+	border-radius: 15px;
+	margin: 3px 1px -13px 1px;
+}
+.divStyleTopImg{
+	width: 18px;
+	height: 18px;
+	margin-top: 5px;
+	margin-left: 5px;
+	margin-right: 5px;
+	float: left;
+}
+.moreImg{
+	width: 18px;
+	height: 18px;
+	margin-top: 2px;
+	margin-left: 5px;
+	margin-right: 5px;
+	float: right;
+}
+
+.table {
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 20px;
+}
+table {
+    background-color: transparent;
+}
+table {
+    border-spacing: 0;
+    border-collapse: collapse;
+}
+.left_triangle{
+	height:0px;  
+	width:0px;  
+	border-width:8px;  
+	border-style:solid;  
+	border-color:transparent #FFFFFF transparent transparent;  
+	position: relative;
+	left: 46px;
+	top:15px;
+}
+.left_CardTriangle{
+	height:0px;  
+	width:0px;  
+	border-width:8px;  
+	border-style:solid;  
+	border-color:transparent #FDFCFC transparent transparent;  
+	position: relative;
+	left: 46px;
+	top:15px;
+}
+.right_triangle{
+	float: right;
+	height: 0px;  
+	width: 0px;  
+	border-width: 8px;  
+	border-style: solid;  
+	border-color: transparent transparent transparent #009FDD;  
+	position: relative;
+	right: 0px;
+	top: 7px;
+}
+.messageBody{
+	position: fixed;
+	top: 50px;
+	bottom: 60px;
+	width: 100%;
+	word-break: break-all;
+	height: auto;
+	overflow:auto;
+	overflow-x: hidden;
+	-webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+.messageDIVstyle{
+	margin-top: 10px;
+	margin-bottom: 10px;
+	width: 100%;
+	height: auto;
+	overflow:hidden;
+}
+.messageReply_icon{
+	width: 40px;
+	height: 40px;
+	background-color: #F5F5F5;
+	float: left;
+	margin-left: 10px;
+}
+.message_content_DIVstyle{
+	height: auto;
+	font-size: 20px;
+    color: #FFFFFF;
+	background: #009FDD;
+	border-radius: 5px;
+	margin-right: 0px;
+	float: right;
+	padding: 5px 10px 5px 10px;
+}
+.messageReply_content_DIVstyle{
+	width: 80%;
+	font-size: 20px;
+    color: #000000;
+	background: #FFFFFF;
+	border-radius: 5px;
+	overflow: hidden;
+	margin-right: 10px;
+	margin-left: 61px;
+	margin-top: -10px;
+	margin-bottom: 5px;
+	padding: 5px 10px 5px 10px;
+}
+.content_DIVstyle{
+	position: relative;
+	width: 40px;
+	height: 40px;
+}
+.DIVCardstyle{
+	width: 80%;
+	font-size: 20px;
+    color: #000000;
+	background: #FFFFFF;
+	overflow: hidden;
+	margin-right: 10px;
+	margin-left: 61px;
+	margin-top: -10px;
+	margin-bottom: 5px;
+	/*padding: 5px 10px 5px 10px;*/
+	border-radius: 5px; /*角落圓滑*/
+	/*box-shadow: 0px 3px 13px 1px #D4D4D4;
+	-webkit-box-shadow: 0px 3px 13px 1px #D4D4D4;
+	-moz-box-shadow: 0px 3px 13px 1px #D4D4D4;
+	-o-box-shadow: 0px 3px 13px 1px #D4D4D4;*/
+}
+.divCardStyleTop{
+	background: #FDFCFC;
+	margin: 0px 0px -13px 0px;
+}
+.divCardStyleTopImg{
+	width: 20px;
+	height: 20px;
+	margin-top: 5px;
+	margin-left: 5px;
+	margin-right: 5px;
+	float: left;
+}
+.titleCard {
+	font-size: 20px;
+	text-align: left;
+	margin-left: 5px;
+	height: 20px;
+	display:inline;
+}

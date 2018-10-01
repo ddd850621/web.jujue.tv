@@ -1,0 +1,26 @@
+.item{
+	height: 80px;
+	width: 70px;
+	margin-left: 15px;
+}
+.item_content{
+	height: 60px;
+	width: 60px;
+	margin-left: 5px;
+    
+	border: 1px solid #0066FF;
+	border-radius: 30px;
+}
+.top{
+	top: 65px;
+}
+.cardName{
+	position: relative;
+	text-align: center;
+}
+.owl_img{
+	width: 40px;
+	height: 40px;
+	margin-left: 10px;
+	margin-top: 10px;
+}

@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale = 1.0, user-scalable = 0" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="app-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="apple-touch-fullscreen" content="yes" />
+
+    <link rel="icon" type="image/png" href="img/ticket.png" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/bootstrap-dialog.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <script src="https://cdn.socket.io/socket.io-1.4.5.js"></script>
+
+    <script src="http://boss.ypcloud.com:8081/webmms/webmms.js"></script>
+    <script src="http://boss.ypcloud.com:8081/webmms/websocket.js"></script>
+
+    <script src="js/mmsmain.js"></script>
+
+    <link href="https://unpkg.com/ionicons@4.0.0/dist/css/ionicons.min.css" rel="stylesheet" />
+</head>
+
+<body>
+
+    
+            <button type="button" id="near_nav">Nearby</button>
+
+            <div class="form-group">
+                <label for="target_xprc">Target</label>
+                <select id="xrpc_select" class="pull-right" size=""></select>
+                <input type="text" class="form-control" id="target_xrpc" value="" placeholder="">
+            </div>
+
+            
+
+    <div class="defaultChannel">
+        <select id="mySelect" size="">
+            <option>Please Choice</option>
+            <option>A0</option>
+            <option>Master</option>
+            <option>Ystand</option>
+            <option>Cstand</option>
+            <option>Ylobby</option>
+        </select>
+
+        <a href="#">
+            <div class="nearby-icon"></div>
+        </a>
+
+    </div>
+
+
+    <div class="btn-group">
+
+
+
+
+        <div class="btn-tool">
+            <button type="button" id="send_btn_xmsg1" class="button">
+                <img src="css/img/ftv-01.png" alt="FTV-Logo">
+            </button>
+            <p>民視</p>
+        </div>
+
+        <div class="btn-tool">
+            <button type="button" id="send_btn_xmsg2" class="button">
+                <img src="css/img/CTV-01.png" alt="CTV-Logo">
+            </button>
+            <p>中視</p>
+        </div>
+
+        <div class="btn-tool">
+            <button type="button" id="send_btn_xmsg3" class="button">
+                <img src="css/img/ttv.png" alt="TTV-Logo">
+            </button>
+            <p>台視</p>
+        </div>
+
+
+
+
+
+
+        <div class="btn-tool">
+            <button type="button" id="send_btn_xmsg4" class="button">
+                <i class="icon ion-md-images"></i>
+            </button>
+            <p>圖片</p>
+        </div>
+
+        <div class="btn-tool">
+            <button type="button" id="send_btn_xmsg5" class="button">
+                <i class="icon ion-logo-youtube"></i>
+            </button>
+            <p>五月天</p>
+        </div>
+
+        <div class="btn-tool">
+            <button type="button" id="send_btn_xmsg6" class="button">
+                <i class="icon ion-logo-youtube"></i>
+            </button>
+            <p>Sugar</p>
+        </div>
+
+
+
+
+
+        <div class="btn-tool">
+            <button type="button" id="send_btn_xmsg7" class="button">
+                <i class="icon ion-logo-youtube"></i>
+            </button>
+            <p>世大運</p>
+        </div>
+
+        <div class="btn-tool">
+                <a href="tel:1243433">
+            <button type="button" id="send_btn_xmsg8" class="button">
+                <img src="css/img/grandpa.jpg" alt="grandpa" class="faceIcon">
+            </button></a>
+            <p>爺爺</p>
+        </div>
+
+        <div class="btn-tool">
+                <a href="tel:1243433">
+            <button type="button" id="send_btn_xmsg9" class="button"  >
+                <img src="css/img/grandma.jpg" alt="grandma" class="faceIcon">
+            </button></a>
+            <p>奶奶</p>
+        </div>
+
+        <div class="btn-tool">
+            <button type="button" id="send_btn_xmsg10" class="button btn-add">
+                    <i class="icon ion-md-add"></i>
+            </button>
+            <p>新增</p>
+        </div>
+
+
+
+
+
+
+
+    </div>
+
+
+
+
+</body>
+
+</html>
